@@ -1,4 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.2s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    transition: all 0.2s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px); }
+
 * {
   box-sizing: border-box; }
 
@@ -22,7 +44,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.8); }
+      background: rgba(68, 68, 68, 0.7); }
 
 h1, h2, h3 {
   margin: 0;
@@ -44,7 +66,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #de493c; }
+  color: #F7C331; }
 
 main {
   padding: 4rem;
@@ -54,8 +76,8 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #de493c;
-        transition: all 0.15s ease-out; }
+        color: #F7C331;
+        transition: all 0.2s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
