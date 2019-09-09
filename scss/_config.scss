@@ -4,6 +4,7 @@ $secondary-color: #F7C331;
 $show-home-image: true;
 $home-image: url(../img/background.JPG);
 $portrait-image: url(../img/portrait-cropped.jpg);
+$portrait-image-sm: url(../img/portrait-cropped-sm.jpg);
 $background-opacity: 0.7;
 
 @mixin easeOut {
@@ -29,5 +30,26 @@ $background-opacity: 0.7;
            }
         }
 
+    }
+}
+
+@mixin mediaSmall {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+@mixin mediaMedium {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin mediaLarge {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+@mixin mediaExtraLarge {
+    @media screen and (min-width: 1171px) {
+        @content;
     }
 }
