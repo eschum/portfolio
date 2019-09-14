@@ -113,15 +113,69 @@ main {
         p, h6 {
             letter-spacing: 0.1em;
         }
+
+        &:hover {
+            color: $secondary-color;
+            @include easeOut;
+            border-bottom: set-color-of-text($primary-color) 5px solid;
+        }
     }
 }
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.7rem;
+
+    img {
+        width: 100%;
+        border: 3px #fff solid;
+
+        &:hover {
+            opacity: 0.75;
+            border-color: $secondary-color;
+            @include easeOut;
+        }
+    }
+}
+
+//Button Styling
+.btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+
+    &:hover {
+        background: $secondary-color;
+        color: set-color-of-text($secondary-color);
+        @include easeOut;
+    }
+}
+
+.btn-dark {
+    @extend .btn;
+    background: darken($primary-color, 50);
+    color: #fff;
+}
+
+.btn-light {
+    @extend .btn;
+    background: lighten($primary-color, 50);
+    color: #333;
+}
+
+
+
+
+
 
 #main-footer {
     text-align: center;
     padding: 1rem;
     background: darken($primary-color, 10);
     color: set-color-of-text($primary-color);
-    height: 55px;
+    height: 60px;
 }
 
 @import 'mobile';
