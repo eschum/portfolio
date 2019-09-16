@@ -10,7 +10,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: #000;
     transition: all 0.2s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -41,14 +41,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: #eaeaea;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.2s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-brand {
-    background: #444;
+    background: #F7F7F7;
     transform: translate3d(0, 100%, 0);
     transition: all 0.2s ease-out; }
     .menu-brand.show {
@@ -58,14 +58,14 @@
       height: 250px;
       background: url(../img/portrait-cropped.jpg);
       border-radius: 10%;
-      border: solid 1px #F7C331; }
+      border: solid 1px #368cbf; }
   .menu .nav-item {
     transform: translate3d(800px, 0, 0);
     transition: all 0.2s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #F7C331; }
+      color: #368cbf; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -73,11 +73,11 @@
     text-transform: uppercase;
     padding: 0.5rem 0;
     font-weight: 300;
-    color: #fff;
+    color: #000;
     text-decoration: none;
     transition: all 0.2s ease-out; }
     .menu .nav-link:hover {
-      color: #F7C331; }
+      color: #368cbf; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.05s; }
@@ -95,15 +95,15 @@
   box-sizing: border-box; }
 
 body {
-  background: #444;
-  color: #fff;
+  background: #F7F7F7;
+  color: #000;
   height: 100%;
   margin: 0;
   font-family: 'Roboto','Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 0.2em;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/background.JPG);
+    background: url(../img/background5.jpeg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -114,7 +114,10 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.7); }
+      background: rgba(247, 247, 247, 0.7); }
+
+.cn {
+  letter-spacing: 0; }
 
 h1, h2, h3 {
   margin: 0;
@@ -124,7 +127,7 @@ h1, h2, h3 {
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 1rem;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    background: rgba(252, 252, 252, 0.5); }
 
 a {
   color: #fff;
@@ -136,7 +139,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #F7C331; }
+  color: #368cbf; }
 
 main {
   padding: 4rem;
@@ -146,26 +149,31 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #F7C331;
+        color: #368cbf;
         transition: all 0.2s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
 
+main#about h1.lg-heading {
+  padding-bottom: 2rem; }
+
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job1 job1' 'job2 job2 job2' 'job3 job3 job3';
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-areas: 'bioimage bio bio bio' 'job4 job4 job1 job1' 'job5 job5 job2 job2' 'job6 job6 job3 job3';
+  grid-template-columns: repeat(4, 1fr); }
   .about-info .img-bio {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: #F7C331 3px solid; }
+    border: #368cbf 3px solid; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.25rem; }
+  .about-info .cn {
+    font-family: "Microsoft JhengHei", Tahoma, Verdana, Arial, sans-serif; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
@@ -173,15 +181,15 @@ main {
   .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
-    background: #515151;
+    background: white;
     padding: 0.5rem;
-    border-bottom: #F7C331 5px solid; }
+    border-bottom: #368cbf 2px solid; }
     .about-info .job p, .about-info .job h6 {
       letter-spacing: 0.1em; }
     .about-info .job:hover {
-      color: #F7C331;
+      color: #368cbf;
       transition: all 0.2s ease-out;
-      border-bottom: #fff 5px solid; }
+      border-bottom: #000 5px solid; }
 
 .projects {
   display: grid;
@@ -192,7 +200,7 @@ main {
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.75;
-      border-color: #F7C331;
+      border-color: #368cbf;
       transition: all 0.2s ease-out; }
 
 .boxes {
@@ -209,7 +217,7 @@ main {
     transition: all 0.2s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
-      background: #F7C331;
+      background: #368cbf;
       color: #000; }
       .boxes div:hover span {
         color: #000; }
@@ -220,23 +228,23 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #F7C331;
+    background: #368cbf;
     color: #000;
     transition: all 0.2s ease-out; }
 
 .btn-dark {
-  background: black;
+  background: #787878;
   color: #fff; }
 
 .btn-light {
-  background: #c4c4c4;
+  background: white;
   color: #333; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #2b2b2b;
-  color: #fff;
+  background: #dedede;
+  color: #000;
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
@@ -245,9 +253,35 @@ main {
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  body#bg-img#bg-img {
+    background: url(../img/background-sm.jpeg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img#bg-img:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(247, 247, 247, 0.7); } }
 
 @media screen and (max-width: 768px) {
+  body#bg-img#bg-img {
+    background: url(../img/background-sm.jpeg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img#bg-img:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(247, 247, 247, 0.7); }
   main {
     align-items: center;
     text-align: center; }

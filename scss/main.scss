@@ -6,7 +6,7 @@
 }
 
 body {
-    @include background();
+    @include background($home-image);
     background: $primary-color;
     color: set-color-of-text($primary-color);
     height: 100%;
@@ -14,6 +14,10 @@ body {
     font-family: 'Roboto','Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 0.2em;
     line-height: 1.5;
+}
+
+.cn {
+    letter-spacing: 0;
 }
 
 //Note - comments in css are started with "//"
@@ -73,15 +77,22 @@ main {
     }
 }
 
+main#about {
+    h1.lg-heading {
+        padding-bottom: 2rem;
+    }
+}
+
+
 .about-info {
     display: grid;
     grid-gap: 30px;
     grid-template-areas: 
-    'bioimage bio bio'
-    'job1 job1 job1'
-    'job2 job2 job2'
-    'job3 job3 job3';
-    grid-template-columns: repeat(3, 1fr);
+    'bioimage bio bio bio'
+    'job4 job4 job1 job1'
+    'job5 job5 job2 job2'
+    'job6 job6 job3 job3';
+    grid-template-columns: repeat(4, 1fr);
 
 
     .img-bio {
@@ -94,6 +105,11 @@ main {
         grid-area: bio;
         font-size: 1.25rem;
     }
+    
+    .cn {
+        font-family: "Microsoft JhengHei", Tahoma, Verdana, Arial, sans-serif;
+    }
+    
     
     .job-1 {
         grid-area: job1;
@@ -108,7 +124,7 @@ main {
     .job {
         background: lighten($primary-color, 5);
         padding: 0.5rem;
-        border-bottom: $secondary-color 5px solid;
+        border-bottom: $secondary-color 2px solid;
     
         p, h6 {
             letter-spacing: 0.1em;
