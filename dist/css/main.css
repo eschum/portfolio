@@ -100,7 +100,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: 'Roboto','Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  letter-spacing: 0.2em;
+  letter-spacing: 0em;
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/background5.jpeg);
@@ -142,7 +142,7 @@ header {
   color: #368cbf; }
 
 main {
-  padding: 4rem;
+  padding: 3rem;
   min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
@@ -159,11 +159,15 @@ main {
 main#about h1.lg-heading {
   padding-bottom: 2rem; }
 
+main#worktemp h2.construction {
+  text-align: center;
+  margin-top: 30vh; }
+
 .about-info {
   display: grid;
-  grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio bio' 'edu1 edu1 edu2 edu2' 'job1 job1 job1 job1' 'job2 job2 job2 job2' 'job3 job3 job3 job3';
-  grid-template-columns: repeat(4, 1fr); }
+  grid-gap: 20px;
+  grid-template-areas: 'bioimage bio bio bio bio bio' 'edulab edulab edulab edulab edulab edulab' 'edu1 edu1 edu1 edu2 edu2 edu2' '. . . edu2 edu2 edu2' 'joblab joblab joblab joblab joblab joblab' '. job1 job1 job1 job1 .' '. job2 job2 job2 job2 .' '. job3 job3 job3 job3 .' 'skilllab skilllab skilllab skilllab skilllab skilllab' 'skill skill skill pub pub pub';
+  grid-template-columns: repeat(6, 1fr); }
   .about-info .img-bio {
     grid-area: bioimage;
     margin: auto;
@@ -171,9 +175,25 @@ main#about h1.lg-heading {
     border: #368cbf 3px solid; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.25rem; }
+    font-size: 1rem; }
   .about-info .cn {
     font-family: "Microsoft JhengHei", Tahoma, Verdana, Arial, sans-serif; }
+  .about-info .alignleft {
+    float: left; }
+  .about-info .alignright {
+    float: right; }
+  .about-info .edulab {
+    grid-area: edulab; }
+    .about-info .edulab h3 {
+      text-align: center; }
+  .about-info .joblab {
+    grid-area: joblab; }
+    .about-info .joblab h3 {
+      text-align: center; }
+  .about-info .skilllab {
+    grid-area: skilllab; }
+    .about-info .skilllab h3 {
+      text-align: center; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
@@ -184,11 +204,15 @@ main#about h1.lg-heading {
     grid-area: edu1; }
   .about-info .edu2 {
     grid-area: edu2; }
+  .about-info .skill {
+    grid-area: skill; }
+  .about-info .pub {
+    grid-area: pub; }
   .about-info .job {
     background: white;
     padding: 0.5rem;
     border-bottom: #368cbf 2px solid;
-    border-radius: 2px; }
+    border-radius: 5px; }
     .about-info .job > * {
       pointer-events: none; }
     .about-info .job h6 {
@@ -197,6 +221,9 @@ main#about h1.lg-heading {
     .about-info .job p {
       letter-spacing: 0;
       display: none; }
+    .about-info .job p.edu {
+      letter-spacing: 0;
+      display: block; }
     .about-info .job.showJob p {
       display: block; }
     .about-info .job:hover {

@@ -8,6 +8,8 @@ const navItems = document.querySelectorAll('.nav-item');
 //const job = document.querySelector('.job');
 const job = document.querySelectorAll('.job');
 
+window.onscroll = function() {scrollResponse()};
+
 for (var i = 0; i < job.length; i++) {
     job[i].addEventListener('click', toggleJobDisplay, false);
 }
@@ -48,5 +50,17 @@ function toggleJobDisplay() {
     } else {
         event.target.classList.remove('showJob');
         jobVisible = false;
+    }
+}
+
+
+function scrollResponse() {
+    var header = document.getElementById('about-header');
+    var sticky = header.offsetTop;
+    if (window.pageYOffset > sticky) {
+        header.style.position = "fixed";
+        header.style.top = "0";
+    } else {
+        document.getElementById('about-header').style.position = "relative";
     }
 }

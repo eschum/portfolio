@@ -12,7 +12,7 @@ body {
     height: 100%;
     margin: 0;
     font-family: 'Roboto','Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    letter-spacing: 0.2em;
+    letter-spacing: 0em;
     line-height: 1.5;
 }
 
@@ -52,7 +52,7 @@ header {
 }
 
 main {
-    padding: 4rem;
+    padding: 3rem;
     //height: 100%;
     min-height: calc(100vh - 60px);
 
@@ -83,17 +83,29 @@ main#about {
     }
 }
 
+main#worktemp {
+    h2.construction {
+        text-align: center;
+        margin-top: 30vh;
+    }
+}
+
 
 .about-info {
     display: grid;
-    grid-gap: 30px;
+    grid-gap: 20px;
     grid-template-areas: 
-    'bioimage bio bio bio'
-    'edu1 edu1 edu2 edu2'
-    'job1 job1 job1 job1'
-    'job2 job2 job2 job2'
-    'job3 job3 job3 job3';
-    grid-template-columns: repeat(4, 1fr);
+    'bioimage bio bio bio bio bio'
+    'edulab edulab edulab edulab edulab edulab'
+    'edu1 edu1 edu1 edu2 edu2 edu2'
+    '. . . edu2 edu2 edu2'
+    'joblab joblab joblab joblab joblab joblab'
+    '. job1 job1 job1 job1 .'
+    '. job2 job2 job2 job2 .'
+    '. job3 job3 job3 job3 .'
+    'skilllab skilllab skilllab skilllab skilllab skilllab'
+    'skill skill skill pub pub pub';
+    grid-template-columns: repeat(6, 1fr);
 
 
     .img-bio {
@@ -102,16 +114,48 @@ main#about {
         border-radius: 50%;
         border: $secondary-color 3px solid;
     }
+
     .bio {
         grid-area: bio;
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
     
     .cn {
         font-family: "Microsoft JhengHei", Tahoma, Verdana, Arial, sans-serif;
     }
+
+    .alignleft {
+        float: left;
+    }
+
+    .alignright {
+        float: right;
+    }
     
-    
+    .edulab {
+        grid-area: edulab;
+        
+        h3 {
+            text-align: center;
+        }
+    }
+
+    .joblab {
+        grid-area: joblab;
+        
+        h3 {
+            text-align: center;
+        }
+    }
+
+    .skilllab {
+        grid-area: skilllab;
+        
+        h3 {
+            text-align: center;
+        }
+    }
+
     .job-1 {
         grid-area: job1;
     }
@@ -130,13 +174,20 @@ main#about {
         grid-area: edu2;
     }
 
+    .skill {
+        grid-area: skill;
+    }
 
-    
+    .pub {
+        grid-area: pub;
+    }
+
+
     .job {
         background: lighten($primary-color, 5);
         padding: 0.5rem;
         border-bottom: $secondary-color 2px solid;
-        border-radius: 2px;
+        border-radius: 5px;
 
         &> * {
             pointer-events: none;
@@ -150,6 +201,11 @@ main#about {
         p {
             letter-spacing: 0;
             display: none;
+        }
+
+        p.edu {
+            letter-spacing: 0;
+            display: block;
         }
 
         &.showJob {
