@@ -44,12 +44,10 @@ function toggleMenu() {
 }
 
 function toggleJobDisplay() {
-    if (!jobVisible) {
-        event.target.classList.add('showJob');
-        jobVisible = true;
-    } else {
+    if (event.target.classList.contains("job") & event.target.classList.contains("showJob")) {
         event.target.classList.remove('showJob');
-        jobVisible = false;
+    } else if (event.target.classList.contains("job")) {
+        event.target.classList.add('showJob');
     }
 }
 
