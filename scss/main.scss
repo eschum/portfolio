@@ -89,9 +89,10 @@ main#about {
     grid-gap: 30px;
     grid-template-areas: 
     'bioimage bio bio bio'
-    'job4 job4 job1 job1'
-    'job5 job5 job2 job2'
-    'job6 job6 job3 job3';
+    'edu1 edu1 edu2 edu2'
+    'job1 job1 job1 job1'
+    'job2 job2 job2 job2'
+    'job3 job3 job3 job3';
     grid-template-columns: repeat(4, 1fr);
 
 
@@ -120,20 +121,55 @@ main#about {
     .job-3 {
         grid-area: job3;
     }
+
+    .edu1 {
+        grid-area: edu1;
+    }
+
+    .edu2 {
+        grid-area: edu2;
+    }
+
+
     
     .job {
         background: lighten($primary-color, 5);
         padding: 0.5rem;
         border-bottom: $secondary-color 2px solid;
+        border-radius: 2px;
+
+        &> * {
+            pointer-events: none;
+        }
     
-        p, h6 {
+        h6 {
             letter-spacing: 0.1em;
+            display: inline;
+        }
+
+        p {
+            letter-spacing: 0;
+            display: none;
+        }
+
+        &.showJob {
+            p {
+                display: block;
+                
+            }
         }
 
         &:hover {
             color: $secondary-color;
+            cursor: pointer;
+            
             @include easeOut;
-            border-bottom: set-color-of-text($primary-color) 5px solid;
+            border-bottom: set-color-of-text($primary-color) 2px solid;
+
+            p {
+                //display: block;
+                color: set-color-of-text($primary-color);
+            }
         }
     }
 }

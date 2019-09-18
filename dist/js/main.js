@@ -5,12 +5,21 @@ const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
 const menuBrand = document.querySelector('.menu-brand');
 const navItems = document.querySelectorAll('.nav-item');
+//const job = document.querySelector('.job');
+const job = document.querySelectorAll('.job');
+
+for (var i = 0; i < job.length; i++) {
+    job[i].addEventListener('click', toggleJobDisplay, false);
+}
 
 //Initial menu state
 
 let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
+
+let jobVisible = false;
+//job.addEventListener('click', toggleJobDisplay);
 
 function toggleMenu() {
     if(!showMenu) {
@@ -29,5 +38,15 @@ function toggleMenu() {
         menuNav.classList.remove('show');
         navItems.forEach(item => item.classList.remove('show'));
         showMenu = false;
+    }
+}
+
+function toggleJobDisplay() {
+    if (!jobVisible) {
+        event.target.classList.add('showJob');
+        jobVisible = true;
+    } else {
+        event.target.classList.remove('showJob');
+        jobVisible = false;
     }
 }
