@@ -100,12 +100,13 @@ body {
   height: 100%;
   margin: 0;
   font-family: 'Roboto','Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  letter-spacing: 0.2em;
+  letter-spacing: 0em;
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/background5.jpeg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover;
+    background-position: center center; }
     body#bg-img:after {
       content: '';
       position: absolute;
@@ -142,7 +143,8 @@ header {
   color: #368cbf; }
 
 main {
-  padding: 4rem;
+  padding: 3rem;
+  height: 100%;
   min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
@@ -158,12 +160,29 @@ main {
 
 main#about h1.lg-heading {
   padding-bottom: 2rem; }
+  main#about h1.lg-heading.sticky {
+    transition: all 0.2s ease-out;
+    position: fixed;
+    background: #eaeaea;
+    padding-top: 2vh;
+    padding-left: 3rem;
+    padding-bottom: 1vh;
+    left: 0;
+    width: 100vw;
+    top: 0px;
+    font-size: 36px; }
+  main#about h1.lg-heading.sticky + .about-info {
+    margin-top: 20vh; }
+
+main#worktemp h2.construction {
+  text-align: center;
+  margin-top: 30vh; }
 
 .about-info {
   display: grid;
-  grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio bio' 'job4 job4 job1 job1' 'job5 job5 job2 job2' 'job6 job6 job3 job3';
-  grid-template-columns: repeat(4, 1fr); }
+  grid-gap: 20px;
+  grid-template-areas: "bioimage bio bio bio bio bio" "edulab edulab edulab edulab edulab edulab" "edu1 edu1 edu1 edu2 edu2 edu2" ". . . edu2 edu2 edu2" "joblab joblab joblab joblab joblab joblab" "job1 job1 job2 job2 job3 job3" "skilllab skilllab skilllab skilllab skilllab skilllab" "skill skill skill pub pub pub" "skill skill skill . . .";
+  grid-template-columns: repeat(6, 1fr); }
   .about-info .img-bio {
     grid-area: bioimage;
     margin: auto;
@@ -171,25 +190,74 @@ main#about h1.lg-heading {
     border: #368cbf 3px solid; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.25rem; }
+    font-size: 1rem; }
   .about-info .cn {
     font-family: "Microsoft JhengHei", Tahoma, Verdana, Arial, sans-serif; }
+  .about-info .alignleft {
+    float: left; }
+  .about-info .alignright {
+    float: right; }
+  .about-info .lab {
+    display: inline-block; }
+  .about-info .edulab {
+    grid-area: edulab;
+    padding: 2.5vh 0; }
+    .about-info .edulab > * {
+      text-align: center; }
+  .about-info .joblab {
+    grid-area: joblab;
+    padding: 2.5vh 0; }
+    .about-info .joblab > * {
+      text-align: center; }
+  .about-info .skilllab {
+    grid-area: skilllab;
+    padding: 2.5vh 0; }
+    .about-info .skilllab > * {
+      text-align: center; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
     grid-area: job2; }
   .about-info .job-3 {
     grid-area: job3; }
+  .about-info .edu1 {
+    grid-area: edu1; }
+  .about-info .edu2 {
+    grid-area: edu2; }
+  .about-info .skill {
+    grid-area: skill; }
+  .about-info .pub {
+    grid-area: pub; }
+    .about-info .pub p {
+      text-indent: -2rem;
+      padding-left: 2rem;
+      display: block; }
   .about-info .job {
     background: white;
     padding: 0.5rem;
-    border-bottom: #368cbf 2px solid; }
-    .about-info .job p, .about-info .job h6 {
-      letter-spacing: 0.1em; }
+    border-bottom: #368cbf 2px solid;
+    border-radius: 5px; }
+    .about-info .job > * {
+      pointer-events: none; }
+    .about-info .job h6 {
+      letter-spacing: 0.1em;
+      display: inline; }
+    .about-info .job h4 {
+      margin-top: 0;
+      margin-bottom: 0.5rem; }
+    .about-info .job p {
+      margin-top: 0; }
+    .about-info .job.click p.desc {
+      letter-spacing: 0;
+      display: block; }
     .about-info .job:hover {
       color: #368cbf;
+      cursor: pointer;
       transition: all 0.2s ease-out;
-      border-bottom: #000 5px solid; }
+      border-bottom: #000 2px solid; }
+      .about-info .job:hover p {
+        display: block;
+        color: #000; }
 
 .projects {
   display: grid;
@@ -255,9 +323,10 @@ main#about h1.lg-heading {
   .projects {
     grid-template-columns: repeat(3, 1fr); }
   body#bg-img#bg-img {
-    background: url(../img/background-sm.jpeg);
+    background: url(../img/background-sm-v2.jpeg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover;
+    background-position: center center; }
     body#bg-img#bg-img:after {
       content: '';
       position: absolute;
@@ -270,9 +339,10 @@ main#about h1.lg-heading {
 
 @media screen and (max-width: 768px) {
   body#bg-img#bg-img {
-    background: url(../img/background-sm.jpeg);
+    background: url(../img/background-sm-v2.jpeg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover;
+    background-position: center center; }
     body#bg-img#bg-img:after {
       content: '';
       position: absolute;
@@ -302,11 +372,11 @@ main#about h1.lg-heading {
     height: 20vh;
     transform: translate3d(100%, 0, 0); }
     .menu-brand .portrait {
-      background: url(../img/portrait-cropped-sm.jpg);
+      background: url(../img/portrait-cropped-menu-small.jpg);
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bioimage' 'bio' 'edulab' 'edu1' 'edu2' 'joblab' 'job1' 'job2' 'job3' 'skilllab' 'skill' 'pub';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
@@ -315,4 +385,18 @@ main#about h1.lg-heading {
   main#home h1 {
     margin-top: 10vh; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  body#bg-img#bg-img {
+    background: url(../img/background-sm2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center; }
+    body#bg-img#bg-img:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(247, 247, 247, 0.7); } }
