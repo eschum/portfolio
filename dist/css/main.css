@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 .menu-btn {
   position: absolute;
@@ -41,14 +42,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #eaeaea;
+    background: #e8e8e8;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.2s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-brand {
-    background: #F7F7F7;
+    background: #F5F5F5;
     transform: translate3d(0, 100%, 0);
     transition: all 0.2s ease-out; }
     .menu-brand.show {
@@ -95,7 +96,7 @@
   box-sizing: border-box; }
 
 body {
-  background: #F7F7F7;
+  background: #F5F5F5;
   color: #000;
   height: 100%;
   margin: 0;
@@ -115,7 +116,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(247, 247, 247, 0.7); }
+      background: rgba(245, 245, 245, 0.7); }
 
 .cn {
   letter-spacing: 0; }
@@ -128,7 +129,7 @@ h1, h2, h3 {
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 1rem;
     padding: 0.2rem 1rem;
-    background: rgba(252, 252, 252, 0.5); }
+    background: rgba(250, 250, 250, 0.5); }
 
 a {
   color: #fff;
@@ -163,7 +164,7 @@ main#about h1.lg-heading {
   main#about h1.lg-heading.sticky {
     transition: all 0.2s ease-out;
     position: fixed;
-    background: #eaeaea;
+    background: #e8e8e8;
     padding-top: 2vh;
     padding-left: 3rem;
     padding-bottom: 1vh;
@@ -192,7 +193,7 @@ main#worktemp h2.construction {
     grid-area: bio;
     font-size: 1rem; }
   .about-info .cn {
-    font-family: "Microsoft JhengHei", Tahoma, Verdana, Arial, sans-serif; }
+    font-family: Tahoma, Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif; }
   .about-info .alignleft {
     float: left; }
   .about-info .alignright {
@@ -201,17 +202,17 @@ main#worktemp h2.construction {
     display: inline-block; }
   .about-info .edulab {
     grid-area: edulab;
-    padding: 2.5vh 0; }
+    padding: 4vh 0; }
     .about-info .edulab > * {
       text-align: center; }
   .about-info .joblab {
     grid-area: joblab;
-    padding: 2.5vh 0; }
+    padding: 4vh 0; }
     .about-info .joblab > * {
       text-align: center; }
   .about-info .skilllab {
     grid-area: skilllab;
-    padding: 2.5vh 0; }
+    padding: 4vh 0; }
     .about-info .skilllab > * {
       text-align: center; }
   .about-info .job-1 {
@@ -235,7 +236,6 @@ main#worktemp h2.construction {
   .about-info .job {
     background: white;
     padding: 0.5rem;
-    border-bottom: #368cbf 2px solid;
     border-radius: 5px; }
     .about-info .job > * {
       pointer-events: none; }
@@ -254,7 +254,7 @@ main#worktemp h2.construction {
       color: #368cbf;
       cursor: pointer;
       transition: all 0.2s ease-out;
-      border-bottom: #000 2px solid; }
+      border-bottom: #368cbf 2px solid; }
       .about-info .job:hover p {
         display: block;
         color: #000; }
@@ -281,7 +281,8 @@ main#worktemp h2.construction {
     font-size: 2rem;
     border: 3px #fff solid;
     padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
+    margin: auto 30vh 3rem;
+    text-align: center;
     transition: all 0.2s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
@@ -301,7 +302,7 @@ main#worktemp h2.construction {
     transition: all 0.2s ease-out; }
 
 .btn-dark {
-  background: #787878;
+  background: #767676;
   color: #fff; }
 
 .btn-light {
@@ -311,7 +312,7 @@ main#worktemp h2.construction {
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #dedede;
+  background: gainsboro;
   color: #000;
   height: 60px; }
 
@@ -335,7 +336,7 @@ main#worktemp h2.construction {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(247, 247, 247, 0.7); } }
+      background: rgba(245, 245, 245, 0.7); } }
 
 @media screen and (max-width: 768px) {
   body#bg-img#bg-img {
@@ -351,7 +352,7 @@ main#worktemp h2.construction {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(247, 247, 247, 0.7); }
+      background: rgba(245, 245, 245, 0.7); }
   main {
     align-items: center;
     text-align: center; }
@@ -399,4 +400,4 @@ main#worktemp h2.construction {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(247, 247, 247, 0.7); } }
+      background: rgba(245, 245, 245, 0.7); } }

@@ -141,7 +141,8 @@ main#worktemp {
     }
     
     .cn {
-        font-family: "Microsoft JhengHei", Tahoma, Verdana, Arial, sans-serif;
+        //font-family: "Microsoft JhengHei", Tahoma, Verdana, Arial, sans-serif;
+        font-family: Tahoma, Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
     }
 
     .alignleft {
@@ -158,15 +159,15 @@ main#worktemp {
     
     .edulab {
         grid-area: edulab;
-        padding: 2.5vh 0;
-        &> * {
+        padding: 4vh 0;
+         &> * {
             text-align: center;
         }
     }
 
     .joblab {
         grid-area: joblab;
-        padding: 2.5vh 0;
+        padding: 4vh 0;
         
         &> * {
             text-align: center;
@@ -175,7 +176,7 @@ main#worktemp {
 
     .skilllab {
         grid-area: skilllab;
-        padding: 2.5vh 0;
+        padding: 4vh 0;
 
         &> * {
             text-align: center;
@@ -217,7 +218,7 @@ main#worktemp {
     .job {
         background: lighten($primary-color, 5);
         padding: 0.5rem;
-        border-bottom: $secondary-color 2px solid;
+        //border-bottom: $secondary-color 2px solid;
         border-radius: 5px;
 
         &> * {
@@ -258,7 +259,7 @@ main#worktemp {
             cursor: pointer;
             
             @include easeOut;
-            border-bottom: set-color-of-text($primary-color) 2px solid;
+            border-bottom: $secondary-color 2px solid;
 
             p {
                 display: block;
@@ -292,13 +293,17 @@ main#worktemp {
     justify-content: space-evenly;
     align-items: center;
     margin-top: 1rem;
+
     
     div {
         font-size: 2rem;
         border: 3px #fff solid;
         padding: 1.5rem 2.5rem;
-        margin-bottom: 3rem;
+        margin: auto 30vh 3rem;
+        //margin-bottom: 3rem;
+        text-align: center;
         @include easeOut;
+
 
         &:hover {
             padding: 0.5rem 1.5rem;
