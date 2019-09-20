@@ -56,11 +56,16 @@
         grid-template-areas:
         'bioimage'
         'bio'
+        'edulab'
         'edu1'
         'edu2'
+        'joblab'
         'job1'
         'job2'
-        'job3';
+        'job3'
+        'skilllab'
+        'skill'
+        'pub';
         grid-template-columns: 1fr;
     }
     .projects {

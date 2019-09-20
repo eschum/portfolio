@@ -143,6 +143,7 @@ header {
 
 main {
   padding: 3rem;
+  height: 100%;
   min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
@@ -158,6 +159,19 @@ main {
 
 main#about h1.lg-heading {
   padding-bottom: 2rem; }
+  main#about h1.lg-heading.sticky {
+    transition: all 0.2s ease-out;
+    position: fixed;
+    background: #eaeaea;
+    padding-top: 2vh;
+    padding-left: 3rem;
+    padding-bottom: 1vh;
+    left: 0;
+    width: 100vw;
+    top: 0px;
+    font-size: 36px; }
+  main#about h1.lg-heading.sticky + .about-info {
+    margin-top: 20vh; }
 
 main#worktemp h2.construction {
   text-align: center;
@@ -166,7 +180,7 @@ main#worktemp h2.construction {
 .about-info {
   display: grid;
   grid-gap: 20px;
-  grid-template-areas: 'bioimage bio bio bio bio bio' 'edulab edulab edulab edulab edulab edulab' 'edu1 edu1 edu1 edu2 edu2 edu2' '. . . edu2 edu2 edu2' 'joblab joblab joblab joblab joblab joblab' '. job1 job1 job1 job1 .' '. job2 job2 job2 job2 .' '. job3 job3 job3 job3 .' 'skilllab skilllab skilllab skilllab skilllab skilllab' 'skill skill skill pub pub pub';
+  grid-template-areas: "bioimage bio bio bio bio bio" "edulab edulab edulab edulab edulab edulab" "edu1 edu1 edu1 edu2 edu2 edu2" ". . . edu2 edu2 edu2" "joblab joblab joblab joblab joblab joblab" "job1 job1 job2 job2 job3 job3" "skilllab skilllab skilllab skilllab skilllab skilllab" "skill skill skill pub pub pub" "skill skill skill . . .";
   grid-template-columns: repeat(6, 1fr); }
   .about-info .img-bio {
     grid-area: bioimage;
@@ -182,17 +196,22 @@ main#worktemp h2.construction {
     float: left; }
   .about-info .alignright {
     float: right; }
+  .about-info .lab {
+    display: inline-block; }
   .about-info .edulab {
-    grid-area: edulab; }
-    .about-info .edulab h3 {
+    grid-area: edulab;
+    padding: 2.5vh 0; }
+    .about-info .edulab > * {
       text-align: center; }
   .about-info .joblab {
-    grid-area: joblab; }
-    .about-info .joblab h3 {
+    grid-area: joblab;
+    padding: 2.5vh 0; }
+    .about-info .joblab > * {
       text-align: center; }
   .about-info .skilllab {
-    grid-area: skilllab; }
-    .about-info .skilllab h3 {
+    grid-area: skilllab;
+    padding: 2.5vh 0; }
+    .about-info .skilllab > * {
       text-align: center; }
   .about-info .job-1 {
     grid-area: job1; }
@@ -208,6 +227,10 @@ main#worktemp h2.construction {
     grid-area: skill; }
   .about-info .pub {
     grid-area: pub; }
+    .about-info .pub p {
+      text-indent: -2rem;
+      padding-left: 2rem;
+      display: block; }
   .about-info .job {
     background: white;
     padding: 0.5rem;
@@ -218,13 +241,13 @@ main#worktemp h2.construction {
     .about-info .job h6 {
       letter-spacing: 0.1em;
       display: inline; }
+    .about-info .job h4 {
+      margin-top: 0;
+      margin-bottom: 0.5rem; }
     .about-info .job p {
+      margin-top: 0; }
+    .about-info .job.click p.desc {
       letter-spacing: 0;
-      display: none; }
-    .about-info .job p.edu {
-      letter-spacing: 0;
-      display: block; }
-    .about-info .job.showJob p {
       display: block; }
     .about-info .job:hover {
       color: #368cbf;
@@ -232,6 +255,7 @@ main#worktemp h2.construction {
       transition: all 0.2s ease-out;
       border-bottom: #000 2px solid; }
       .about-info .job:hover p {
+        display: block;
         color: #000; }
 
 .projects {
@@ -298,7 +322,7 @@ main#worktemp h2.construction {
   .projects {
     grid-template-columns: repeat(3, 1fr); }
   body#bg-img#bg-img {
-    background: url(../img/background-sm.jpeg);
+    background: url(../img/background-sm-v2.jpeg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img#bg-img:after {
@@ -313,7 +337,7 @@ main#worktemp h2.construction {
 
 @media screen and (max-width: 768px) {
   body#bg-img#bg-img {
-    background: url(../img/background-sm.jpeg);
+    background: url(../img/background-sm-v2.jpeg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img#bg-img:after {
@@ -345,11 +369,11 @@ main#worktemp h2.construction {
     height: 20vh;
     transform: translate3d(100%, 0, 0); }
     .menu-brand .portrait {
-      background: url(../img/portrait-cropped-sm.jpg);
+      background: url(../img/portrait-cropped-menu-small.jpg);
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'edu1' 'edu2' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bioimage' 'bio' 'edulab' 'edu1' 'edu2' 'joblab' 'job1' 'job2' 'job3' 'skilllab' 'skill' 'pub';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }

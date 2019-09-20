@@ -10,9 +10,9 @@ const job = document.querySelectorAll('.job');
 
 window.onscroll = function() {scrollResponse()};
 
-for (var i = 0; i < job.length; i++) {
-    job[i].addEventListener('click', toggleJobDisplay, false);
-}
+// for (var i = 0; i < job.length; i++) {
+//     job[i].addEventListener('click', toggleJobDisplay, false);
+// }
 
 //Initial menu state
 
@@ -20,7 +20,7 @@ let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
 
-let jobVisible = false;
+//let jobVisible = false;
 //job.addEventListener('click', toggleJobDisplay);
 
 function toggleMenu() {
@@ -43,22 +43,24 @@ function toggleMenu() {
     }
 }
 
-function toggleJobDisplay() {
-    if (event.target.classList.contains("job") & event.target.classList.contains("showJob")) {
-        event.target.classList.remove('showJob');
-    } else if (event.target.classList.contains("job")) {
-        event.target.classList.add('showJob');
-    }
-}
+// function toggleJobDisplay() {
+//     if (event.target.classList.contains("job") & event.target.classList.contains("showJob")) {
+//         event.target.classList.remove('showJob');
+//     } else if (event.target.classList.contains("job")) {
+//         event.target.classList.add('showJob');
+//     }
+// }
 
 
 function scrollResponse() {
     var header = document.getElementById('about-header');
     var sticky = header.offsetTop;
     if (window.pageYOffset > sticky) {
-        header.style.position = "fixed";
-        header.style.top = "0";
+        header.classList.add('sticky');
+        //header.style.position = "fixed";
+        //header.style.top = "0";
     } else {
-        document.getElementById('about-header').style.position = "relative";
+        header.classList.remove('sticky');
+        //document.getElementById('about-header').style.position = "relative";
     }
 }
