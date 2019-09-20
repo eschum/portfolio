@@ -123,8 +123,7 @@ main#worktemp {
     //'. job2 job2 job2 job2 .'
     //'. job3 job3 job3 job3 .'
     'skilllab skilllab skilllab skilllab skilllab skilllab'
-    'skill skill skill pub pub pub'
-    'skill skill skill . . .';
+    'skill skill skill pub pub pub';
     grid-template-columns: repeat(6, 1fr);
 
 
@@ -229,7 +228,9 @@ main#worktemp {
             letter-spacing: 0.1em;
             display: inline;
         }
-
+        br {
+            padding-bottom: 2rem;
+        }
 
         h4 {
             margin-top: 0;
@@ -261,7 +262,7 @@ main#worktemp {
             @include easeOut;
             border-bottom: $secondary-color 2px solid;
 
-            p {
+            p, ul {
                 display: block;
                 color: set-color-of-text($primary-color);
             }
@@ -286,6 +287,8 @@ main#worktemp {
     }
 }
 
+
+
 //Contact styling.
 .boxes {
     display: flex;
@@ -299,7 +302,7 @@ main#worktemp {
         font-size: 2rem;
         border: 3px #fff solid;
         padding: 1.5rem 2.5rem;
-        margin: auto 30vh 3rem;
+        margin: auto 25vh 3rem;
         //margin-bottom: 3rem;
         text-align: center;
         @include easeOut;

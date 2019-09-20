@@ -50,7 +50,6 @@
             width: 150px;
             height: 150px;
         }
-        
     }
     .about-info {
         grid-template-areas:
@@ -70,6 +69,13 @@
     }
     .projects {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .boxes {
+        
+        div {
+            margin: auto 0 3rem;
+        }
     }
 }
 @include mediaSmall {

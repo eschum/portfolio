@@ -182,7 +182,7 @@ main#worktemp h2.construction {
 .about-info {
   display: grid;
   grid-gap: 20px;
-  grid-template-areas: "bioimage bio bio bio bio bio" "edulab edulab edulab edulab edulab edulab" "edu1 edu1 edu1 edu2 edu2 edu2" ". . . edu2 edu2 edu2" "joblab joblab joblab joblab joblab joblab" "job1 job1 job2 job2 job3 job3" "skilllab skilllab skilllab skilllab skilllab skilllab" "skill skill skill pub pub pub" "skill skill skill . . .";
+  grid-template-areas: "bioimage bio bio bio bio bio" "edulab edulab edulab edulab edulab edulab" "edu1 edu1 edu1 edu2 edu2 edu2" ". . . edu2 edu2 edu2" "joblab joblab joblab joblab joblab joblab" "job1 job1 job2 job2 job3 job3" "skilllab skilllab skilllab skilllab skilllab skilllab" "skill skill skill pub pub pub";
   grid-template-columns: repeat(6, 1fr); }
   .about-info .img-bio {
     grid-area: bioimage;
@@ -242,6 +242,8 @@ main#worktemp h2.construction {
     .about-info .job h6 {
       letter-spacing: 0.1em;
       display: inline; }
+    .about-info .job br {
+      padding-bottom: 2rem; }
     .about-info .job h4 {
       margin-top: 0;
       margin-bottom: 0.5rem; }
@@ -255,7 +257,7 @@ main#worktemp h2.construction {
       cursor: pointer;
       transition: all 0.2s ease-out;
       border-bottom: #368cbf 2px solid; }
-      .about-info .job:hover p {
+      .about-info .job:hover p, .about-info .job:hover ul {
         display: block;
         color: #000; }
 
@@ -281,7 +283,7 @@ main#worktemp h2.construction {
     font-size: 2rem;
     border: 3px #fff solid;
     padding: 1.5rem 2.5rem;
-    margin: auto 30vh 3rem;
+    margin: auto 25vh 3rem;
     text-align: center;
     transition: all 0.2s ease-out; }
     .boxes div:hover {
@@ -380,7 +382,9 @@ main#worktemp h2.construction {
     grid-template-areas: 'bioimage' 'bio' 'edulab' 'edu1' 'edu2' 'joblab' 'job1' 'job2' 'job3' 'skilllab' 'skill' 'pub';
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .boxes div {
+    margin: auto 0 3rem; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
