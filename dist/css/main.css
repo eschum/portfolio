@@ -105,7 +105,8 @@ body {
   body#bg-img {
     background: url(../img/background5.jpeg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover;
+    background-position: center center; }
     body#bg-img:after {
       content: '';
       position: absolute;
@@ -324,7 +325,8 @@ main#worktemp h2.construction {
   body#bg-img#bg-img {
     background: url(../img/background-sm-v2.jpeg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover;
+    background-position: center center; }
     body#bg-img#bg-img:after {
       content: '';
       position: absolute;
@@ -339,7 +341,8 @@ main#worktemp h2.construction {
   body#bg-img#bg-img {
     background: url(../img/background-sm-v2.jpeg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover;
+    background-position: center center; }
     body#bg-img#bg-img:after {
       content: '';
       position: absolute;
@@ -386,7 +389,8 @@ main#worktemp h2.construction {
   body#bg-img#bg-img {
     background: url(../img/background-sm2.jpg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover;
+    background-position: center center; }
     body#bg-img#bg-img:after {
       content: '';
       position: absolute;
