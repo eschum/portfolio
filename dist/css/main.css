@@ -150,9 +150,10 @@ main {
   main .icons {
     margin-top: 1rem; }
     main .icons a {
-      padding: 0.4rem; }
+      padding: 0.4rem;
+      color: #368cbf; }
       main .icons a:hover {
-        color: #368cbf;
+        color: #F5F5F5;
         transition: all 0.2s ease-out; }
   main#home {
     overflow: hidden; }
@@ -182,7 +183,7 @@ main#worktemp h2.construction {
 .about-info {
   display: grid;
   grid-gap: 20px;
-  grid-template-areas: "bioimage bio bio bio bio bio" "edulab edulab edulab edulab edulab edulab" "edu1 edu1 edu1 edu2 edu2 edu2" ". . . edu2 edu2 edu2" "joblab joblab joblab joblab joblab joblab" "job1 job1 job2 job2 job3 job3" "skilllab skilllab skilllab skilllab skilllab skilllab" "skill skill skill pub pub pub";
+  grid-template-areas: "bioimage bio bio bio bio bio" "edulab edulab edulab edulab edulab edulab" "edu1 edu1 edu1 edu2 edu2 edu2" "joblab joblab joblab joblab joblab joblab" "job1 job1 job2 job2 job3 job3" "skilllab skilllab skilllab skilllab skilllab skilllab" "skill skill skill pub pub pub";
   grid-template-columns: repeat(6, 1fr); }
   .about-info .img-bio {
     grid-area: bioimage;
@@ -254,7 +255,6 @@ main#worktemp h2.construction {
       display: block; }
     .about-info .job:hover {
       color: #368cbf;
-      cursor: pointer;
       transition: all 0.2s ease-out;
       border-bottom: #368cbf 2px solid; }
       .about-info .job:hover p, .about-info .job:hover ul {
@@ -286,6 +286,10 @@ main#worktemp h2.construction {
     margin: auto 25vh 3rem;
     text-align: center;
     transition: all 0.2s ease-out; }
+    .boxes div a {
+      color: #000; }
+      .boxes div a:visited {
+        color: #000; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
       background: #368cbf;
