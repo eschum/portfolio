@@ -117,6 +117,7 @@
         font-weight: 300;
         color: set-color-of-text($primary-color);
         text-decoration: none;
+        text-align: center;
         @include easeOut;
 
         &:hover {

@@ -79,6 +79,10 @@
     }
 }
 @include mediaSmall {
+    h1.lg-heading {
+        font-size: 36px;
+    }
+    
     main#home h1 {
         margin-top: 10vh;
     }
@@ -88,7 +92,11 @@
     body#bg-img {
         @include background($home-image-sm2);
     }
-
+    .boxes {
+        div {
+            width: 100%;
+        }
+    }
 
     
 }
